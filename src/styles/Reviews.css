@@ -1,0 +1,119 @@
+.main-container {
+    max-width: 1350px;
+    min-height: 1000px;
+    margin: 150px auto;
+    background-color: #e8e8e8;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.section_container {
+    font-style: "Ubuntu";
+    color: #fff;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.section_container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #145c9e;
+}
+.section-card img{
+    border-radius: 50px;
+}
+
+.section_container h1 {
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.section_container h1:after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: -10px; /* Adjust spacing if needed */
+    transform: translateX(-50%);
+    height: 3px;
+    width: 6rem;
+    background-color: #145c9e;
+}
+
+/* Fix the grid layout */
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 2rem; /* Add spacing between cards */
+    padding: 1rem;
+    width: 100%; /* Ensure the grid takes full width */
+    margin: auto;
+}
+
+/* Card Styling */
+.section-card {
+    
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 2rem;
+    background-color: #94a3b8;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section-card:hover {
+    transform: translateY(-10px); /* Add hover effect */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-card::before {
+    position: absolute;
+    content: "";
+    top: -50px;
+    left: -50px;
+    width: 150%;
+    aspect-ratio: 1; /* Maintain circular aspect */
+    border-radius: 50%; /* Ensure circular shape */
+    background-color: #145c9e;
+    z-index: -1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.section-card span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3rem;
+    color: #94a3b8;
+}
+
+.section-card h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+.section-card p{
+    color: #fff;
+    font-style: "Ubuntu";
+}
+.section-card:hover::before{
+    width: 200%;
+}
+.section-card:hover:is(h4,h5){
+    color: #e8e8e8;
+}
+.section-card:hover:is(p,h6){
+    color: #145c9e;
+}
+.section-card:hover img{
+    color: #94a3b8;
+}

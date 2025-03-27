@@ -1,0 +1,31 @@
+.inputcontent{
+    width: 480px;
+    height: 50px;
+    background-color: #fff;
+    border-color: #49A3D8;
+    border: 2px solid #ddd; /* Set border color */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+    align-self: center;
+    
+  }
+  .inputtext{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.2rem;
+  }
+  .iconcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  
+  }
+  .inputcontent .icon{
+    font-size: 25px;
+   
+  }

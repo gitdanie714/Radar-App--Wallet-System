@@ -1,0 +1,11 @@
+.main-title{
+    font-size: 40px;
+    color: #fff;
+}
+.Main{
+    width: 100%;
+    height: auto;
+    background-color: #000;
+   text-align: center;
+   padding: 3px;
+}

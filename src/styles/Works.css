@@ -1,0 +1,60 @@
+.main_container {
+    max-width: 1350px;
+    height: 500px;
+    margin: 150px auto;
+    background-color: #fff;
+    font-family: sans-serif;
+}
+h1 {
+   padding-top: 0px;
+    text-align: center;
+    font-size: 3.2rem;
+    margin-bottom: 150px;
+}
+li img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px; /* Add spacing below the image */
+}
+ul {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    padding: 0;
+    margin: 0 auto;
+}
+ul li {
+    display: inline-block;
+    width: 200px;
+    margin: 0 40px; /* Add spacing between list items */
+    vertical-align: top;
+}
+ul li p {
+    font-size: 20px;
+    color: black;
+    margin-top: 40px; /* Adjust spacing above the text */
+}
+ul li .icon {
+    background-color: #2b79c3;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    margin-right: 100px;
+    margin-bottom: 33px; /* Adjust spacing below the icon */
+    position: relative;
+    bottom: 10px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.icon_container {
+    background-color: #2b79c3;
+    width: 290px;
+    height: 4px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    left: 0px;
+    margin: 10px 0; /* Add spacing above and below the container */
+}

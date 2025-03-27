@@ -1,0 +1,112 @@
+/* .sidebar-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+   
+}
+.sidebar-link{
+    display: flex;
+    padding: 10px;
+    color: #aeaeae;
+}
+ .sidebar-icon{
+   font-size: 28px;
+   margin-right: 10px;
+ } */
+
+
+
+.sidebar-menu-items{
+  width: 100%;
+}
+.logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  color: #1a83ff;
+}
+.logo{
+  width: 40px;
+  height: 40px;
+}
+
+.close-icon {
+  background-color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+.sidebar-toggle span{
+  margin-left: 16px;
+}
+.sidebar-utils{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+}
+.sidebar-utils h4{
+  margin-left: 100px;
+  color: #aeaeaa;
+
+}
+.sidebar-toggle{
+  background-color: "#fff";
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.overview,.wallet,.history,.account,.help{
+display: flex;
+height: 90vh;
+align-items: center;
+justify-content: center;
+font-size: 3rem;
+}
+
+.sidebar-text{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+  border-radius: 10px;
+ }
+.sidebar-text a{
+  text-decoration: none;
+  color: #aeaeae;
+  font-size: 18px;
+  font-style: normal;
+  width: 95%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  gap: 10px;
+}
+.sidebar-text a:hover{
+  background-color: #eaeaea;
+  color: #1a83ff;
+ padding: 25px 20px;
+
+}
+.active{
+  background-color: #eaeaea;
+  border-left: 4px solid #1a83ff;
+  /* border-top-left-radius: 4px; */
+}
+.active a{
+  color: #1a83ff;
+}
+.sidebar-text .icon{
+height: 50px;
+width: 50px;
+}

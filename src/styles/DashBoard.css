@@ -1,0 +1,99 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3{
+    font-weight: 500;
+}
+/* Container for the dashboard layout */
+.dashboard {
+    min-height: 100vh;
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: 300px 1fr; 
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        'sidebar main';
+}
+.main{
+    grid-area: main;
+}
+
+/* Sidebar Styles */
+#sidebar {
+    grid-area: sidebar;
+    height: 100vh;
+    top: 0px;
+    align-self: start;
+    background-color: #fff;
+    width: 300px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.toggle-button {
+    display: none;
+}
+
+.sidebar-responsive {
+    height: calc(100vh - 66px);
+    top: 66px;
+    display: inline !important;
+    position: absolute;
+    z-index: 12 !important;
+}
+
+ .close-icon {
+    display: none;
+}
+/* End of Sidebar Styles */
+
+
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "main";
+    }
+    #sidebar {
+        display: none;
+    }
+     .close-icon {
+        display: block;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    .toggle-button {
+        display: inline;
+    }
+    .nav-welcome {
+        display: none;
+    }
+}
+
+/* Ensure the sidebar and main content are placed correctly */
+.main {
+    grid-area: main;
+}
+
+/* README DOCUMENTATION 
+Styling the dashboard layout
+*Container Styles
+*Layout Styles - Sidebar, Main Content, Navbar
+*Visibility Styles - Sidebar, Navbar
+*Global Styles
+*Media Queries
+*Responsive Styles  
+*/
