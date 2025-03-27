@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Landing.css";
-import landpage_pic from "../Assets/Images/LANDING PAGE IMAGE.jpg";
 import mylogo from "../Assets/Images/mylogo.png";
 import slideimg from "../Assets/Images/slideimg.png"
 import { BiSolidTaxi } from "react-icons/bi";
