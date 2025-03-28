@@ -1,9 +1,13 @@
 import React from 'react'
+import "../styles/Help.css"
 
 function Help() {
   return (
     <div className='main'>
-        <h1>Help</h1>
+      <div className="help-container">
+      <h1>Help</h1>
+      </div>
+       
     </div>
   )
 }
