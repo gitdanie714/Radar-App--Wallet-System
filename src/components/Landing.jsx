@@ -1,11 +1,13 @@
 import React from "react";
 import "../styles/Landing.css";
-import landpage_pic from "../Assets/Images/LANDING PAGE IMAGE.jpg";
 import mylogo from "../Assets/Images/mylogo.png";
 import slideimg from "../Assets/Images/slideimg.png"
 import { BiSolidTaxi } from "react-icons/bi";
+import { Navigate,useNavigate } from "react-router-dom";
 
 function Landing() {
+  const navigate = useNavigate();
+
   return (
     <div className="home">
       <div className="logopage">
@@ -21,7 +23,7 @@ function Landing() {
             Fast and Secure Rides
             <br /> with flexible Payment Options
           </h1>
-          <button className="buttoncontent">Get Started</button>
+          <button onClick={() => navigate("/login")} className="buttoncontent">Get Started</button>
         </div>
       </div>
 
