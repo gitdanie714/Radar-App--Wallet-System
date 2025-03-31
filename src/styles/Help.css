@@ -5,20 +5,27 @@
 
   }
   .help-title {
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; 
     text-align: center;
     color: #333;
   }
-  .help-title , h1{
-    display: inline;
-  }
+    .help-title h1 {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        display: inline;
+    }
+
   .help-description {
     text-align: center;
     color: #555;
   }
   
   .contact-form-container {
-    max-width: 600px;
+    width: 300px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;
