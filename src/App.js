@@ -4,7 +4,7 @@ import LandingPage from './Pages/LandingPage';
 import LoginSignup from './Pages/LoginSignup';
 import "./index.css";
 import "./App.css";
-import CreateWalletPin from './components/CreateWalletPin';
+import CreateWalletPin from './Pages/CreateWalletPin';
 import DashBoard from './Pages/DashBoard';
 import Overview from './Pages/WalletOverview';
 
