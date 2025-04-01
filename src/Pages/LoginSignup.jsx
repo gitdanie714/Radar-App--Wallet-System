@@ -6,16 +6,68 @@ import "../styles/LoginSignup.css"
 import InputContent from "../components/InputContent"
 import Button from "../components/Button"
 import pic from "../Assets/Images/login ui.jpg"
+import { apiService } from '../ApiCalls';
 
 function LoginSignup() {
   const navigate = useNavigate();
   
   const[action, setaction] = useState("Login");
-  var changeActionstate = (newaction) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const changeActionstate = (newaction) => {
     setaction(newaction);
+    setError("");
    
   }
 
+  const handleLogin = async () => {
+    if(!email || !password  ){
+      setError("Email and Password are required");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await apiService.login(email, password)
+      const{token} = response.data;
+      localStorage.setItem("authToken", token);
+      navigate("/dashboard");
+    } catch (error) {
+      setError(error.response?.data?.message || "Login failed. Try again");
+    }finally {
+      setLoading(false);
+    }
+      
+    }
+
+  }
+  
+
+  // Handle Signup
+  const handleSignup = async () => {
+    if (!fullName || !username || !email || !password) {
+      setError("All fields are required.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await apiService.signup(fullName, username, email, password);
+      alert("Signup successful! Please login.");
+      setAction("Login");
+    } catch (err) {
+      setError(err.response?.data?.message || "Signup failed. Try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+ 
+
+
+  
   var login = () => {
     return(
       <>
@@ -88,6 +140,6 @@ function LoginSignup() {
         
     </div>
   )
-}
+
 
 export default LoginSignup
