@@ -16,6 +16,7 @@ function LoginSignup() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
   const changeActionstate = (newaction) => {
     setaction(newaction);
     setError("");
@@ -42,29 +43,27 @@ function LoginSignup() {
       
     }
 
-  }
+  
   
 
-  // Handle Signup
-  const handleSignup = async () => {
-    if (!fullName || !username || !email || !password) {
-      setError("All fields are required.");
-      return;
-    }
+  // // Handle Signup
+  // const handleSignup = async () => {
+  //   if (!fullName || !username || !email || !password) {
+  //     setError("All fields are required.");
+  //     return;
+  //   }
 
-    setLoading(true);
-    try {
-      const response = await apiService.signup(fullName, username, email, password);
-      alert("Signup successful! Please login.");
-      setAction("Login");
-    } catch (err) {
-      setError(err.response?.data?.message || "Signup failed. Try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
- 
+  //   setLoading(true);
+  //   try {
+  //     const response = await apiService.signup(fullName, username, email, password);
+  //     alert("Signup successful! Please login.");
+  //     setAction("Login");
+  //   } catch (err) {
+  //     setError(err.response?.data?.message || "Signup failed. Try again.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
 
   
@@ -87,7 +86,9 @@ function LoginSignup() {
       <>
         <InputContent type="email" 
         placeholder="Enter Email Address" 
-        icon={<MdEmail className='icon'/>}/>
+        icon={<MdEmail className='icon'/>} inputStyle={{ width: "auto"
+
+        }}/>
         
       </>
     )
@@ -139,7 +140,10 @@ function LoginSignup() {
         </div>
         
     </div>
+    
   )
 
 
-export default LoginSignup
+};
+
+export default LoginSignup;
