@@ -32,7 +32,8 @@ function LoginSignup() {
     setLoading(true);
     try {
       const response = await apiService.login(email, password)
-      const{token} = response.data;
+    const{token} = response.data;
+    
       localStorage.setItem("authToken", token);
       navigate("/dashboard");
     } catch (error) {
