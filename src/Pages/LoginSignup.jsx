@@ -110,38 +110,37 @@ function LoginSignup() {
             <img src={pic} alt="Signup/Login"/>
           </div>
           <div className='logininputcontainer'>
-            <div className='signup'>
-            <div className="text">{action == "signup" ?"SignUp":"Login"}</div>
+            <div className={`auth-form ${action.toLowerCase()}`}>
+            <div className="text">{action === "signup" ? "SignUp" : "Login"}</div>
             <div className='under'></div>
 
-            {action == "signup"? signup():login()}
-          { action == "login" && <div className="forgot-password">
-            Forgot Password? <span>Click Here!</span></div>
-}
+            {action === "signup" ? signup() : login()}
+            {action === "Login" && (
+              <div className="forgot-password">
+                Don't have an account? <span onClick={() => changeActionstate('signup')}>Click Here!</span>
+              </div>
+            )}
+            {action === "signup" && (
+              <div className="forgot-password">
+                Already have an account? <span onClick={() => changeActionstate('Login')} >Click Here!</span>
+              </div>
+            )}
             <div className="submitcontainer">
-            <Button className={action === "Login" ?"submit gray" : "submit"} changeAction={()=>{changeActionstate('signup')}} buttonlabel="Signup"/> 
-            <Button className={action === "Sign Up"? "sumbit gray":"submit"} changeAction={()=>{changeActionstate('login')}} onClick={() => navigate('/create-pin-modal')}buttonlabel="Login"/>
-        </div>
+              <Button 
+                className={action === "Sign Up" ? "submit gray" : "submit"} 
+                onClick={() => navigate('/create-pin-modal')}
+                buttonlabel={action === "signup" ? "Sign Up" : "Login"}
+              />
+            </div>
         
         </div>
         </div>
-{/* 
-         .header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 9px;
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 40px;
-}  */}
 
           </div>
         
         </div>
         
     </div>
-    
   )
 
 
